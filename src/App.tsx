@@ -6,23 +6,7 @@ import Home from "./pages/Home.tsx";
 function App() {
   return (
     <>
-      <header className="Tytle">
-        <div className="siteLogo">
-          <a href="/">
-            WGRAT
-          </a>
-        </div>
-        <div className="searchBox">
-          <form>
-            <input className="searchTp" placeholder="검색">
-            
-            </input>
-            <button type="submit" className="searchBtn">
-              <img src="/search.png" alt=""/>
-            </button>
-          </form>
-        </div>
-      </header>
+      <Banner />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home/>}></Route>
@@ -34,3 +18,25 @@ function App() {
 }
 
 export default App
+
+export function Banner(){
+  return(
+    <header className="Tytle">
+      <div className="siteLogo">
+        <a href="/">
+          WGRAT
+        </a>
+      </div>
+      <div className="searchBox">
+        <form>
+          <input className="searchTp" placeholder="검색">
+          
+          </input>
+          <button type="submit" className="searchBtn">
+            <img src="/search.png" alt=""/>
+          </button>
+        </form>
+      </div>
+    </header>
+  )
+}
