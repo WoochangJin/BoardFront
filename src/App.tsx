@@ -1,24 +1,34 @@
-import { useState } from 'react'
-import axios from 'axios'
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import './App.css'
+import Home from "./pages/Home.tsx";
+
 
 function App() {
-  const [test, setTest] = useState('')
-
-  const post = async() => {
-    try {
-      const res = await axios.get('http://localhost:8080/api/posts/test')
-      setTest(res.data)
-    }catch(err) {
-      console.log(err)
-    }
-  }
-
   return (
     <>
-      <button onClick={post}>Test API</button>
-      <p>응답: {test}</p>
-
+      <header className="Tytle">
+        <div className="siteLogo">
+          <a href="/">
+            WGRAT
+          </a>
+        </div>
+        <div className="searchBox">
+          <form>
+            <input className="searchTp" placeholder="검색">
+            
+            </input>
+            <button type="submit" className="searchBtn">
+              <img src="/search.png" alt=""/>
+            </button>
+          </form>
+        </div>
+      </header>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home/>}></Route>
+        </Routes>
+      </BrowserRouter>
+      
     </>
   )
 }
