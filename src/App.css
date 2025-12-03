@@ -1,7 +1,7 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0;
   text-align: center;
 }
 
@@ -39,4 +39,81 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.siteLogo a{
+  margin-right: 10px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+header{
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: flex;
+  height: 70px;
+  border: 1px solid #ccc;
+  justify-content: center;
+  align-items: center;
+}
+
+main{
+  margin: 0;
+  padding: 0;
+  min-height: 600px;
+  border: 1px solid #535bf2;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.searchBox > *{
+  background: #242424;
+  height: 45px;
+  width: 300px;
+  display: flex;
+  align-content: center;
+
+}
+
+.searchTp{
+  background: white;
+  width: 250px;
+  margin-left: 4px;
+  height: 35px;
+  margin-top: 4px;
+  border: #242424;
+  font-size: 16px;
+}
+
+.searchTp:focus {
+  outline: none;        /* 포커스 효과 제거 */
+}
+
+.searchBtn {
+  background: #242424;
+  height: 45px;
+  width: 45px; /* 정사각 추천 */
+  display: flex;
+  justify-content: center;
+  align-items: center;   /* ⭐ 세로 가운데 정렬 */
+  border: none;
+  cursor: pointer;
+}
+
+.searchBtn:focus{
+  outline: none;
+}
+
+.searchBtn img{
+  width: 30px;
+  height: 30px;
+}
+
+.searchTp,
+.searchBtn {
+  vertical-align: middle;
 }
